@@ -1,0 +1,50 @@
+"""  
+ Programación Orinetada a Objetos POO o OOP
+
+CLASES .- es como un molde a traves del cual se puede instanciar un objeto dentro de las clases se definen los atributos (propiedades / caracteristicas) y los métodos (funciones o acciones)
+
+OBJETOS O INSTANCIAS .- son parte de una clase los objetos o instacias pertenecen a una clase, es decir para interacturar con la clase o clases y hacer uso de los atributos y metodos es necesario crear un objeto o objetos.
+
+METODO CONSTRUCTOR.- Este metodo especial dentro de una clase y se utiliza para dar un valor a los atributos del objeto al crearlo, es el primer metodo que se ejecuta al crear el objeto y se manda llamar automaticamente al crearlo, es decir este metodo puede recibir parametros al momento de crear el objeto 
+
+Cuando se crear un metodo constructor se utiliza la funcion _init_(), para que se llame automáticamente cada vez que se utiliza la clase para crear un nuevo objeto.
+
+El self es un parámetro es una referencia a la instancia actual de la clase y se utiliza para acceder a variables que pertenecen a la clase.
+
+No es necesario que tenga nombre self, puedes llamarlo como quieras, pero tiene que ser el primer parámetro de cualquier función de la clase. Es decir por regla se utiliza en la palabra self pero puede ser llamado con otro nombre por ejemplo: valor, abd, parametro, etc.
+
+"""
+
+#Ejemplo 1 Crear una clase (un molde para crear mas objetos)llamada Coches y apartir de la clase crear objetos o instancias (coche) con caracteristicas similares (marca,color,modelo,velocidad,potencia,asientos) y con los operaciones de acelerar y frenar. Que los atributos y metodos sean publicos.
+#Muestre el color de los coches
+#Que los operaciones disminuyan o aumenten la velocidad segun sea el caso y hay jugar con los metodos e imprimes la velocidad final
+print("\033c")
+
+class Coches:
+    def __init__(self,marca,color,modelo,velocidad,potencia,asientos)
+        self.__marca=marca
+        self.__color=color
+        self.__modelo=modelo
+        self.__velocidad=velocidad
+        self.__potencia=potencia
+        self.__asientos=asientos
+
+    def acelerar(self):
+        self.velocidad+=1
+        print(f"Ahora la velocidad es: {self.velocidad}")
+
+    def frenar(self):
+        self.velocidad-=1
+        print(f"Ahora la velocidad es: {self.velocidad}")
+
+coche1=Coches("VW","Blanco","2022",220,150,5)
+coche2=Coches("Nissan","Azul","2020",180,150,6)
+
+print(f"el color del coche 1 es: {coche1.color}")
+print(f"el color del coche 2 es:{coche2.color}")
+
+print(f"la velocida del coche 1 ahora es: {coche1.acelerar()}")
+print(f"la velocida del coche 1 ahora es: {coche1.acelerar()}")
+
+for i in range(1,11):
+    coche1.acelerar()
